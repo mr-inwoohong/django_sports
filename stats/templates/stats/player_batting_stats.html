@@ -1,0 +1,60 @@
+{% extends 'stats/base.html' %}
+{% block content %}
+    <h1>MLB Batting Stats for {{ player_name }}</h1>
+    <table>    
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Age</th>
+                <th>Team</th>
+                <th>League</th>
+                <th>Games_Played</th>
+                <th>PA</th>
+                <th>At Bats</th>
+                <th>Runs</th>
+                <th>Hits</th>
+                <th>Doubles</th>
+                <th>Triples</th>
+                <th>Homeruns</th>
+                <th>RBI</th>
+                <th>SB</th>
+                <th>Caught Stealing</th>
+                <th>BB/Walks</th>
+                <th>Strikeouts</th>
+                <th>Hits/At Bats</th>
+                <th>OBP</th>
+                <th>SLG</th>
+                <th>OPS</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for year, stats in data_dict.items %}
+            {% for row in stats %}
+                <tr>
+                    <p>{{ row.Year }}</p>
+                    <td>{{ row.Age }}</td>
+                    <td>{{ row.Team }}</td>
+                    <td>{{ row.League }}</td>
+                    <td>{{ row.Games_Played }}</td>
+                    <td>{{ row.Plate_Appearances }}</td>
+                    <td>{{ row.AB }}</td>
+                    <td>{{ row.Runs }}</td>
+                    <td>{{ row.Hits }}</td>
+                    <td>{{ row.Doubles }}</td>
+                    <td>{{ row.Triples }}</td>
+                    <td>{{ row.Homeruns }}</td>
+                    <td>{{ row.RBI }}</td>
+                    <td>{{ row.Stolen_Bases }}</td>
+                    <td>{{ row.Caught_Stealing}}</td>
+                    <td>{{ row.BB }}</td>
+                    <td>{{ row.Strikeouts }}</td>
+                    <td>{{ row.BA }}</td>
+                    <td>{{ row.OBP }}</td>
+                    <td>{{ row.SLG }}</td>
+                    <td>{{ row.OPS }}</td>
+                </tr>
+            {% endfor %}
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}

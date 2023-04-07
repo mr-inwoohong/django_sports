@@ -1,0 +1,16 @@
+{% extends 'stats/base.html' %}
+{% block content %}
+    <h1>PSA certification verification on # {{ cert_number }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <a href="{{ url }}">{{ cert_number }}</a>
+            </tr>
+        </tbody>
+    </table>
+{% endblock content %}

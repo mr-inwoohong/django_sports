@@ -1,0 +1,52 @@
+{% extends 'stats/base.html' %}
+{% block content %}
+    <h1>NBA Stats for {{ player_name }} in {{ season }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Season</th>
+                <th>Points per game</th>
+                <th>FG</th>
+                <th>FG3</th>
+                <th>FT</th>
+                <th>Rebounds per game</th>
+                <th>Assists per game</th>
+                <th>Steals per game</th>
+                <th>Blocks per game</th>
+                <th>Turnovers per game</th>
+                <th>FGM</th>
+                <th>FGA</th>
+                <th>FG3M</th>
+                <th>FG3A</th>
+                <th>FTM</th>
+                <th>FTA</th>
+                <th>OREB</th>
+                <th>DREB</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in productslist.items %}
+            <tr>
+                <p>{{ row.Season }}</p>
+                <td>{{ row.PPG }}</td>
+                <td>{{ row.FG }}</td>
+                <td>{{ row.FG3 }}</td>
+                <td>{{ row.FT }}</td>
+                <td>{{ row.REB }}</td>
+                <td>{{ row.APG }}</td>
+                <td>{{ row.STL }}</td>
+                <td>{{ row.BLK }}</td>
+                <td>{{ row.TO }}</td>
+                <td>{{ row.FGM }}</td>
+                <td>{{ row.FGA }}</td>
+                <td>{{ row.FG3M }}</td>
+                <td>{{ row.FG3A }}</td>
+                <td>{{ row.FTM }}</td>
+                <td>{{ row.FTA }}</td>
+                <td>{{ row.OREB }}</td>
+                <td>{{ row.DREB }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}

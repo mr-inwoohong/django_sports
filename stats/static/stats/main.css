@@ -1,0 +1,43 @@
+
+
+
+/* Reset some default styles */
+body, figure, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling for the layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+.hero {
+  background-image: url(hero.jpg);
+  height: 500px;
+}
+

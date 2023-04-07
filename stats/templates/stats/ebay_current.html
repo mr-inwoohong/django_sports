@@ -1,0 +1,19 @@
+{% extends 'stats/base.html' %}
+{% block content %}
+    <h1>Sold details for {{ searchterm }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Current Price</th>
+        </thead>
+        <tbody>
+        {% for stat in productslist %}
+            <tr>
+                <td><a href="{{ stat.link }}">{{ stat.title }}</a></td>
+                <td>{{ stat.price }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}

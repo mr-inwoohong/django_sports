@@ -1,0 +1,18 @@
+{% extends 'stats/base.html' %}
+{% block content %}
+    <h1>Headlines on {{ search }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Link</th>
+        </thead>
+        <tbody>
+        {% for stat in productslist %}
+            <tr>
+                <td><a href="{{ stat.link }}">{{ stat.title }}</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}
