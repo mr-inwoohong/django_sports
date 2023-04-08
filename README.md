@@ -1,12 +1,12 @@
 Sports & Collectible Website
 
-This is a website dedicated to providing up to date information on all your favorite players, their cards and other collectibles. Our goal is to be the go-to source for up-to-date information on all your favorites.
+This is a website dedicated to providing up to date information on all your favorite athletes, their memoribilia and other collectible items. Our goal is to be the one-stop-shop for up-to-date information on all your favorite collectibles.
 
 Features
 
 Our website offers the following features:
 
-Check current and most recent sold prices. Check stats on the current player to determine their performance level and analyze whether it affects their memorabilia value. Check headlines on the players and items to see if the news affects their prices. Our website offers a unique feature for collectors, allowing them to track the performance of players and identify potential opportunities to invest in their memorabilia. We also monitor the latest news and updates on players, teams, and sports events to provide real-time insights into how they may impact the value. By providing up-to-date statistics and analysis, we aim to help collectors make informed decisions and maximize the value of their collections.
+Check current and most recent sold prices. Check stats on the current player to determine their performance level and analyze whether it affects their memorabilia value. Check headlines on the players and items to see if the news affects their market. Our website offers a unique feature for collectors, allowing them to track the performance of players and identify potential opportunities to invest in their memorabilia. We also monitor the latest news and updates on players, teams, and sports events to provide real-time insights into how they may impact the value. By providing up-to-date statistics and analysis, we aim to help collectors make informed decisions and maximize the value of their collections.
 
 Usage
 
