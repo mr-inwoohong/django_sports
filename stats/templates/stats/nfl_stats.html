@@ -1,0 +1,63 @@
+{% extends 'stats/base.html' %}
+{% block content %}
+<h1>NFL Stats for {{ player_name }} in {{ season }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Team</th>
+                <th>Position</th>
+                <th>Age</th>
+                <th>Games Played</th>
+                <th>Games Started</th>
+                <th>Complettions</th>
+                <th>Pass Attempts</th>
+                <th>Passing Yards</th>
+                <th>Passing TD</th>
+                <th>INT</th>
+                <th>Rushing Attempts</th>
+                <th>Rushing Yards</th>
+                <th>Yards/Attempt</th>
+                <th>Rushing TD</th>
+                <th>Targets</th>
+                <th>Receptions</th>
+                <th>Receving Yards</th>
+                <th>Yards/Reception</th>
+                <th>Receiving TD</th>
+                <th>Fumble</th>
+                <th>Fumble Lost</th>
+                <th>Total TD</th>
+                <th>2 PM</th>
+                <th>2 PP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <p>{{ stats.Player }}</p>
+                <td>{{ stats.Team }}</td>
+                <td>{{ stats.Position }}</td>
+                <td>{{ stats.Age }}</td>
+                <td>{{ stats.Games_Played }}</td>
+                <td>{{ stats.Games_Started }}</td>
+                <td>{{ stats.Completions }}</td>
+                <td>{{ stats.Pass_Attempts }}</td>
+                <td>{{ stats.Passing_Yards }}</td>
+                <td>{{ stats.Passing_TD }}</td>
+                <td>{{ stats.INT }}</td>
+                <td>{{ stats.Rushing_Attempts }}</td>
+                <td>{{ stats.Rushing_Yards }}</td>
+                <td>{{ stats.Yards_Per_Attempt }}</td>
+                <td>{{ stats.Rushing_TD }}</td>
+                <td>{{ stats.Targets }}</td>
+                <td>{{ stats.Receptions }}</td>
+                <td>{{ stats.Receiving_Yards }}</td>
+                <td>{{ stats.Yards_Per_Reception }}</td>
+                <td>{{ stats.Receiving_TD }}</td>
+                <td>{{ stats.Fumble }}</td>
+                <td>{{ stats.Fumble_Lost }}</td>
+                <td>{{ stats.Total_TD }}</td>
+                <td>{{ stats.2PM }}</td>
+                <td>{{ stats.2PP }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock content %}

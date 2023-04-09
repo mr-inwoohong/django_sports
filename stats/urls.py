@@ -10,4 +10,5 @@ urlpatterns = [
     path('sold/<str:searchterm>/', views.get_data, name='get_data'),
     path('nba/<str:player_name>/<int:season>/', views.nba_stats, name='nba_stats'),
     path('baseball/<str:player_name>/', views.player_batting_stats, name='player_batting_stats'),
+    path('nfl/<str:player_name>/<int:season>/', views.nfl_stats, name='nfl_stats')
 ]
