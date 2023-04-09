@@ -8,11 +8,10 @@
                 <th>Link</th>
         </thead>
         <tbody>
-        {% for stat in productslist %}
-            <tr>
-                <td><a href="{{ stat.link }}">{{ stat.title }}</a></td>
-            </tr>
+        {% for product in productslist %}
+            <h3><a href="{{ product.link }}">{{ product.title }}</a></h3>
         {% endfor %}
+        
         </tbody>
     </table>
 {% endblock content %}

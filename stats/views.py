@@ -39,7 +39,7 @@ def get_data(request, searchterm):
         'productslist': productslist,
     }
 
-    return render(request, 'stats/ebay_sold.html', context)
+    return JsonResponse(productslist, safe=False)
 
 
 
@@ -52,31 +52,50 @@ def get_headlines(request, searchterm):
 
     r = requests.get(url)
     soup = BeautifulSoup(r.text, 'html.parser')
-
-    results = soup.find_all('item')
-    links = soup.find('link')
     
+    results = soup.find_all('item')
+
     productslist = []
 
     for item in results:
         product = {
             'title': item.find('title').text,
-            'link': item.find('link').text,
+            'link': item.find('description').text
         }
         productslist.append(product)
 
-
     context = {
         'searchterm': searchterm,
-        'productslist': productslist,
-
+        'productslist': productslist
     }
-    return render(request, 'stats/headlines.html', context)
+
+    return JsonResponse(productslist, safe=False)
+
+    #return render(request, 'stats/headlines.html', context)
+
+    # results = soup.find_all('item')
+    # links = soup.find('link')
+    
+
+    # productslist = []
+
+    # for item in results:
+    #     product = {
+    #         'title': item.find('title').text,
+    #         'link': item.find('link').text,
+    #     }
+    #     productslist.append(product)
+
+
+    # context = {
+    #     'searchterm': searchterm,
+    #     'productslist': productslist,
+
+    # }
+    # return JsonResponse(productslist, safe=False)
 
 
 
-
-APPLICATION_ID = 'ianhong-weezy-PRD-bbfa4472b-704c86fb'
 
 
 @csrf_exempt
@@ -102,7 +121,7 @@ def get_current(request, searchterm):
         'productslist': productslist,
     }
 
-    return render(request, 'stats/ebay_current.html', context)
+    return JsonResponse(productslist, safe=False)
 
 
 @csrf_exempt
@@ -178,7 +197,7 @@ def player_batting_stats(request, player_name):
         'data_dict': data_dict,
         'player_name': player_name,
     }
-    return render(request, 'stats/player_batting_stats.html', context)
+    return JsonResponse(data_dict, safe=False)
 
     #return render(request, 'stats/player_batting_stats.html')
 
@@ -235,7 +254,8 @@ def nfl_stats(request, player_name, season):
         'season': season,
     }
 
-    return render(request, 'stats/nfl_stats.html', context)
+    return JsonResponse(stats, safe=False)
+
 
 
 
@@ -254,4 +274,4 @@ def psa(request, cert_number):
         'cert_number': cert_number,
     }
 
-    return render(request, 'stats/psa.html', context)
+    return JsonResponse(url, safe=False)
