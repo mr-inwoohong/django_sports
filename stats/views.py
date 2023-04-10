@@ -14,7 +14,7 @@ def home(request):
 
 
 @csrf_exempt
-def get_data(request, searchterm):
+def get_sold(request, searchterm):
     url = f'https://www.ebay.com/sch/i.html?_from=R40&_nkw={searchterm}&_sacat=0&LH_PrefLoc=1&LH_Auction=1&rt=nc&LH_Sold=1&LH_Complete=1'
 
     r = requests.get(url)
@@ -189,7 +189,7 @@ def player_batting_stats(request, player_name):
         cols = row.find_all(['th', 'td'])
         cols = [col.text.strip() for col in cols]
         key = cols[0]  
-        data_dict[key] = [{'Age': cols[0], 'Team': cols[1], 'League': cols[2], 'Games_Played': cols[3], 'Plate_Appearances': cols[4], 'AB': cols[5], ' Runs': cols[6], 'Hits': cols[7], 'Doubles': cols[8], 'Triples': cols[9], 'Homeruns': cols[10], 'RBI': cols[11], 'Stolen_Bases': cols[12], 'Caught_Stealing': cols[13], 'BB': cols[14], 'Strikeouts': cols[15], 'BA': cols[16], 'OBP': cols[17], 'SLG': cols[18], 'OPS': cols[19]}]
+        data_dict[key] = [{'Year': cols[0], 'Age': cols[1], 'Team': cols[2], 'League': cols[3], 'Games_Played': cols[4], 'Plate_Appearances': cols[5], 'AB': cols[6], 'Runs': cols[7], 'Hits': cols[8], 'Doubles': cols[9], 'Triples': cols[10], 'Homeruns': cols[11], 'RBI': cols[12], 'Stolen_Bases': cols[13], 'Caught_Stealing': cols[14], 'BB': cols[15], 'Strikeouts': cols[16], 'BA': cols[17], 'OBP': cols[18], 'SLG': cols[19], 'OPS': cols[20]}]
 
     #stats = json.dumps(data_dict)
 
